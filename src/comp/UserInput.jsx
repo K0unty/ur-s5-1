@@ -4,7 +4,7 @@ export default function UserInput() {
   // Managing the all the user inputs into one object
 
   const [userInput, setUserInput] = useState({
-    initalInvestment: 10000,
+    initialInvestment: 10000,
     annualInvestment: 1200,
     expectedReturn: 6,
     duration: 10,
@@ -27,8 +27,8 @@ export default function UserInput() {
           <label> Initial PantyStinkSCore</label>
           <input
             type="number"
-            value={userInput.initalInvestment}
             required
+            value={userInput.initialInvestment}
             onChange={(e) => handleChange("initialInvestment", e.target.value)}
           />
         </p>
