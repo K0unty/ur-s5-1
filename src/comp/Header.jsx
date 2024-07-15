@@ -31,7 +31,7 @@ export default function Header() {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       />
-      <h1>PanmellScore</h1>
+      <h1>SmellPantyScores</h1>
     </header>
   );
 }
