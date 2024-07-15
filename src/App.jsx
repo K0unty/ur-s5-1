@@ -1,5 +1,8 @@
+// Import Setion
+import Header from "./comp/Header";
+
 function App() {
-  return <h1>React PussyJuice Calc</h1>;
+  return <Header />;
 }
 
 export default App;
