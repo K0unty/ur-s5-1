@@ -39,6 +39,7 @@ body {
   background-color: transparent;
   border-radius: 100px;
   transition: transform 1.5s ease-in-out;
+  cursor: pointer;
 }
 
 #header img:hover {
