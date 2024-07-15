@@ -38,6 +38,11 @@ body {
   object-fit: contain;
   background-color: transparent;
   border-radius: 100px;
+  transition: transform 1.5s ease-in-out;
+}
+
+#header img:hover {
+  transform: scale(2);
 }
 
 #header h1 {
