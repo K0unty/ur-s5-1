@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -6,11 +6,24 @@
 
 body {
   margin: 0;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: radial-gradient(#303b37, #1a1f1d);
-  color: #e1eeeb;
+  background: #0f0c29; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #10101c,
+    #0c0b1a,
+    #290c1d
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #10101c,
+    #0c0b1a,
+    #290c1d
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  color: #f72798;
   min-height: 100vh;
 }
 
@@ -18,7 +31,6 @@ body {
   text-align: center;
   margin: 3rem auto;
 }
-
 
 #header img {
   width: 5rem;
@@ -48,7 +60,7 @@ body {
 #user-input label {
   display: block;
   margin-bottom: 0.25rem;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-size: 0.5rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -79,7 +91,7 @@ body {
 }
 
 #result tbody {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-size: 0.85rem;
   color: #c2e9e0;
 }
