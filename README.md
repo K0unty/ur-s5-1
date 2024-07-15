@@ -1,4 +1,4 @@
-<img src="https://i.postimg.cc/jq3LjKN0/27494268.webp" width="200%">
+<img src="https://i.postimg.cc/jq3LjKN0/27494268.webp">
 
 ---
 
