@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Header from "./comp/Header.jsx";
 import UserInput from "./comp/UserInput.jsx";
+import Results from "./comp/Results.jsx";
 
 function App() {
   const [userInput, setUserInput] = useState({
@@ -24,6 +25,7 @@ function App() {
     <>
       <Header />
       <UserInput userInput={userInput} onChange={handleChange} />
+      <Results input={userInput} />
     </>
   );
 }
