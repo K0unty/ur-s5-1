@@ -28,7 +28,9 @@ function App() {
     <>
       <Header />
       <UserInput userInput={userInput} onChange={handleChange} />
-      {!inputIsValid && <p>😡BASTARD NO NEGATIVE DURATION, FUK FUK 😡</p>}
+      {!inputIsValid && (
+        <p className="center">😡BASTARD NO NEGATIVE DURATION, FUK FUK 😡</p>
+      )}
       {inputIsValid && <Results input={userInput} />}
     </>
   );
