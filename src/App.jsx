@@ -11,6 +11,9 @@ function App() {
     expectedReturn: 6,
     duration: 10,
   });
+
+  const inputIsValid = userInput.duration >= 1;
+
   // one function that can be connected to all inputs
   function handleChange(inputIdentifier, newValue) {
     setUserInput((previousInput) => {
@@ -25,7 +28,8 @@ function App() {
     <>
       <Header />
       <UserInput userInput={userInput} onChange={handleChange} />
-      <Results input={userInput} />
+      {!inputIsValid && <p>😡BASTARD NO NEGATIVE DURATION, FUK FUK 😡</p>}
+      {inputIsValid && <Results input={userInput} />}
     </>
   );
 }
