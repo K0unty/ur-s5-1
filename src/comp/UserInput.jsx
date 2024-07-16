@@ -1,24 +1,5 @@
-import { useState } from "react";
-
-export default function UserInput() {
+export default function UserInput({ onChange, userInput }) {
   // Managing the all the user inputs into one object
-
-  const [userInput, setUserInput] = useState({
-    initialInvestment: 10000,
-    annualInvestment: 4200,
-    expectedReturn: 6,
-    duration: 10,
-  });
-
-  // one function that can be connected to all inputs
-  function handleChange(inputIdentifier, newValue) {
-    setUserInput((previousInput) => {
-      return {
-        ...previousInput,
-        [inputIdentifier]: newValue,
-      };
-    });
-  }
 
   return (
     <section id="user-input">
@@ -29,7 +10,7 @@ export default function UserInput() {
             type="number"
             required
             value={userInput.initialInvestment}
-            onChange={(e) => handleChange("initialInvestment", e.target.value)}
+            onChange={(e) => onChange("initialInvestment", e.target.value)}
           />
         </p>
         <p>
@@ -38,7 +19,7 @@ export default function UserInput() {
             type="number"
             required
             value={userInput.annualInvestment}
-            onChange={(e) => handleChange("annualInvestment", e.target.value)}
+            onChange={(e) => onChange("annualInvestment", e.target.value)}
           />
         </p>
       </div>
@@ -49,7 +30,7 @@ export default function UserInput() {
             type="number"
             required
             value={userInput.expectedReturn}
-            onChange={(e) => handleChange("expectedReturn", e.target.value)}
+            onChange={(e) => onChange("expectedReturn", e.target.value)}
           />
         </p>
         <p>
@@ -58,7 +39,7 @@ export default function UserInput() {
             type="number"
             required
             value={userInput.duration}
-            onChange={(e) => handleChange("duration", e.target.value)}
+            onChange={(e) => onChange("duration", e.target.value)}
           />
         </p>
       </div>

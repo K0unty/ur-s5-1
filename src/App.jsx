@@ -1,12 +1,29 @@
 // Import Setion
-import Header from "./comp/Header";
-import UserInput from "./comp/UserInput";
+import { useState } from "react";
+import Header from "./comp/Header.jsx";
+import UserInput from "./comp/UserInput.jsx";
 
 function App() {
+  const [userInput, setUserInput] = useState({
+    initialInvestment: 10000,
+    annualInvestment: 4200,
+    expectedReturn: 6,
+    duration: 10,
+  });
+  // one function that can be connected to all inputs
+  function handleChange(inputIdentifier, newValue) {
+    setUserInput((previousInput) => {
+      return {
+        ...previousInput,
+        [inputIdentifier]: newValue,
+      };
+    });
+  }
+
   return (
     <>
       <Header />
-      <UserInput />
+      <UserInput userInput={userInput} onChange={handleChange} />
     </>
   );
 }
